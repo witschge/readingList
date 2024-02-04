@@ -1,10 +1,15 @@
 import { useState } from "react";
-
+import BookCreate from "./components/BookCreate";
 function App() {
   const [books, setBooks] = useState([]);
+
+  const createBook = (title) => {
+    console.log("Need to add book with:", title);
+  };
+
   return (
     <div>
-      Reading List App
+      <BookCreate onCreate={createBook} />
       <div
         style={{
           marginTop: "20px",
